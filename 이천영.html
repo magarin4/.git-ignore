@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>numpy Practice</title>
+<title>Chapter 12, 13 Practice Problem</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13091,16 +13091,34 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Chapter-12,-13-Practice-Problem">Chapter 12, 13 Practice Problem<a class="anchor-link" href="#Chapter-12,-13-Practice-Problem">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="c1">#1</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">ve</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> 
-<span class="n">ve</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;high_school_2019.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -13113,13 +13131,165 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>학교명</th>
+      <th>1학년 학급수</th>
+      <th>1학년 학생수</th>
+      <th>2학년 학급수</th>
+      <th>2학년 학생수</th>
+      <th>3학년 학급수</th>
+      <th>3학년 학생수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시 강남구</td>
+      <td>국립국악고등학교</td>
+      <td>5</td>
+      <td>150</td>
+      <td>5</td>
+      <td>149</td>
+      <td>5</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>서울특별시 성북구</td>
+      <td>서울대학교사범대학부설고등학교</td>
+      <td>8</td>
+      <td>239</td>
+      <td>8</td>
+      <td>228</td>
+      <td>8</td>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>서울특별시 금천구</td>
+      <td>국립전통예술고등학교</td>
+      <td>6</td>
+      <td>182</td>
+      <td>6</td>
+      <td>174</td>
+      <td>6</td>
+      <td>169</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>서울특별시 송파구</td>
+      <td>가락고등학교</td>
+      <td>11</td>
+      <td>282</td>
+      <td>11</td>
+      <td>262</td>
+      <td>11</td>
+      <td>288</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>서울특별시 강동구</td>
+      <td>강동고등학교</td>
+      <td>8</td>
+      <td>210</td>
+      <td>8</td>
+      <td>183</td>
+      <td>8</td>
+      <td>221</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2393</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주고등학교</td>
+      <td>11</td>
+      <td>279</td>
+      <td>11</td>
+      <td>279</td>
+      <td>11</td>
+      <td>305</td>
+    </tr>
+    <tr>
+      <th>2394</th>
+      <td>제주특별자치도 서귀포시</td>
+      <td>서귀포산업과학고등학교</td>
+      <td>8</td>
+      <td>151</td>
+      <td>8</td>
+      <td>141</td>
+      <td>8</td>
+      <td>135</td>
+    </tr>
+    <tr>
+      <th>2395</th>
+      <td>제주특별자치도 서귀포시</td>
+      <td>성산고등학교</td>
+      <td>4</td>
+      <td>76</td>
+      <td>5</td>
+      <td>91</td>
+      <td>5</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <th>2396</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주외국어고등학교</td>
+      <td>4</td>
+      <td>99</td>
+      <td>4</td>
+      <td>95</td>
+      <td>4</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>2397</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주제일고등학교부설방송통신고등학교</td>
+      <td>5</td>
+      <td>116</td>
+      <td>5</td>
+      <td>98</td>
+      <td>5</td>
+      <td>126</td>
+    </tr>
+  </tbody>
+</table>
+<p>2398 rows × 8 columns</p>
+</div>
 </div>
 
 </div>
@@ -13130,16 +13300,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#2</span>
-<span class="n">ve</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">fv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">ze</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ve</span><span class="p">,</span> <span class="n">fv</span><span class="p">)</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">ze</span><span class="p">)</span>
-<span class="n">arr</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39; 1학년 학생수&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13152,13 +13316,24 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0., 0., 0., 0., 5., 0., 0., 0., 0., 0.])</pre>
+<pre>0       150
+1       239
+2       182
+3       282
+4       210
+       ... 
+2393    279
+2394    151
+2395     76
+2396     99
+2397    116
+Name:  1학년 학생수, Length: 2398, dtype: int64</pre>
 </div>
 
 </div>
@@ -13169,187 +13344,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#3 </span>
-<span class="n">vc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">vc</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39; 1학년 학생수&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39; 2학년 학생수&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39; 3학년 학생수&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-       27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43,
-       44, 45, 46, 47, 48, 49])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#4</span>
-<span class="n">vcsr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">vc</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">vcsr</span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33,
-       32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16,
-       15, 14, 13, 12, 11, 10])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#5 </span>
-<span class="n">vc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">vc</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[0, 1, 2],
-       [3, 4, 5],
-       [6, 7, 8]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#6</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">vc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">vc</span> <span class="o">&gt;</span> <span class="n">a</span>
-<span class="n">b</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">vc</span><span class="o">&gt;</span><span class="n">a</span><span class="p">)</span>
-<span class="n">c</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[34]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(array([0, 1, 4], dtype=int64),)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#7</span>
-<span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>	
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[35]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[1, 0, 0],
-       [0, 1, 0],
-       [0, 0, 1]], dtype=int8)</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13359,11 +13360,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#8</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>	 <span class="c1"># 시드로 난수 생성 초기값 지정</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">r</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum1</span>
 </pre></div>
 
     </div>
@@ -13382,9 +13379,18 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[0.65358959, 0.11500694, 0.95028286],
-       [0.4821914 , 0.87247454, 0.21233268],
-       [0.04070962, 0.39719446, 0.2331322 ]])</pre>
+<pre>0       442
+1       737
+2       525
+3       832
+4       614
+       ... 
+2393    863
+2394    427
+2395    270
+2396    286
+2397    340
+Length: 2398, dtype: int64</pre>
 </div>
 
 </div>
@@ -13395,11 +13401,24 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#9</span>
-<span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;총 학생수&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sum1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#13.3</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -13412,13 +13431,177 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>(0.9502828643490245, 0.040709624769089126)</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>학교명</th>
+      <th>1학년 학급수</th>
+      <th>1학년 학생수</th>
+      <th>2학년 학급수</th>
+      <th>2학년 학생수</th>
+      <th>3학년 학급수</th>
+      <th>3학년 학생수</th>
+      <th>총 학생수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시 강남구</td>
+      <td>국립국악고등학교</td>
+      <td>5</td>
+      <td>150</td>
+      <td>5</td>
+      <td>149</td>
+      <td>5</td>
+      <td>143</td>
+      <td>442</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>서울특별시 성북구</td>
+      <td>서울대학교사범대학부설고등학교</td>
+      <td>8</td>
+      <td>239</td>
+      <td>8</td>
+      <td>228</td>
+      <td>8</td>
+      <td>270</td>
+      <td>737</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>서울특별시 금천구</td>
+      <td>국립전통예술고등학교</td>
+      <td>6</td>
+      <td>182</td>
+      <td>6</td>
+      <td>174</td>
+      <td>6</td>
+      <td>169</td>
+      <td>525</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>서울특별시 송파구</td>
+      <td>가락고등학교</td>
+      <td>11</td>
+      <td>282</td>
+      <td>11</td>
+      <td>262</td>
+      <td>11</td>
+      <td>288</td>
+      <td>832</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>서울특별시 강동구</td>
+      <td>강동고등학교</td>
+      <td>8</td>
+      <td>210</td>
+      <td>8</td>
+      <td>183</td>
+      <td>8</td>
+      <td>221</td>
+      <td>614</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2393</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주고등학교</td>
+      <td>11</td>
+      <td>279</td>
+      <td>11</td>
+      <td>279</td>
+      <td>11</td>
+      <td>305</td>
+      <td>863</td>
+    </tr>
+    <tr>
+      <th>2394</th>
+      <td>제주특별자치도 서귀포시</td>
+      <td>서귀포산업과학고등학교</td>
+      <td>8</td>
+      <td>151</td>
+      <td>8</td>
+      <td>141</td>
+      <td>8</td>
+      <td>135</td>
+      <td>427</td>
+    </tr>
+    <tr>
+      <th>2395</th>
+      <td>제주특별자치도 서귀포시</td>
+      <td>성산고등학교</td>
+      <td>4</td>
+      <td>76</td>
+      <td>5</td>
+      <td>91</td>
+      <td>5</td>
+      <td>103</td>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>2396</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주외국어고등학교</td>
+      <td>4</td>
+      <td>99</td>
+      <td>4</td>
+      <td>95</td>
+      <td>4</td>
+      <td>92</td>
+      <td>286</td>
+    </tr>
+    <tr>
+      <th>2397</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주제일고등학교부설방송통신고등학교</td>
+      <td>5</td>
+      <td>116</td>
+      <td>5</td>
+      <td>98</td>
+      <td>5</td>
+      <td>126</td>
+      <td>340</td>
+    </tr>
+  </tbody>
+</table>
+<p>2398 rows × 9 columns</p>
+</div>
 </div>
 
 </div>
@@ -13429,11 +13612,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#10</span>
-<span class="n">r</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df2</span>
 </pre></div>
 
     </div>
@@ -13446,13 +13629,22 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0.39216354, 0.46155865, 0.46524925])</pre>
+<pre>지역          서울특별시 강남구서울특별시 성북구서울특별시 금천구서울특별시 송파구서울특별시 강동구서...
+ 학교명        국립국악고등학교서울대학교사범대학부설고등학교국립전통예술고등학교가락고등학교강동고등학교강...
+ 1학년 학급수                                                18580
+ 1학년 학생수                                               463400
+ 2학년 학급수                                                18569
+ 2학년 학생수                                               444714
+ 3학년 학급수                                                18939
+ 3학년 학생수                                               500698
+총 학생수                                                 1408812
+dtype: object</pre>
 </div>
 
 </div>
@@ -13463,10 +13655,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">df</span>
+<span class="n">df3</span><span class="p">[</span><span class="s1">&#39; 1학년 총 학생수&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39; 1학년 학생수&#39;</span><span class="p">]</span>
+<span class="n">df3</span>
 </pre></div>
 
     </div>
@@ -13479,17 +13673,1915 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>학교명</th>
+      <th>1학년 학급수</th>
+      <th>1학년 학생수</th>
+      <th>2학년 학급수</th>
+      <th>2학년 학생수</th>
+      <th>3학년 학급수</th>
+      <th>3학년 학생수</th>
+      <th>총 학생수</th>
+      <th>1학년 총 학생수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시 강남구</td>
+      <td>국립국악고등학교</td>
+      <td>5</td>
+      <td>150</td>
+      <td>5</td>
+      <td>149</td>
+      <td>5</td>
+      <td>143</td>
+      <td>442</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>서울특별시 성북구</td>
+      <td>서울대학교사범대학부설고등학교</td>
+      <td>8</td>
+      <td>239</td>
+      <td>8</td>
+      <td>228</td>
+      <td>8</td>
+      <td>270</td>
+      <td>737</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>서울특별시 금천구</td>
+      <td>국립전통예술고등학교</td>
+      <td>6</td>
+      <td>182</td>
+      <td>6</td>
+      <td>174</td>
+      <td>6</td>
+      <td>169</td>
+      <td>525</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>서울특별시 송파구</td>
+      <td>가락고등학교</td>
+      <td>11</td>
+      <td>282</td>
+      <td>11</td>
+      <td>262</td>
+      <td>11</td>
+      <td>288</td>
+      <td>832</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>서울특별시 강동구</td>
+      <td>강동고등학교</td>
+      <td>8</td>
+      <td>210</td>
+      <td>8</td>
+      <td>183</td>
+      <td>8</td>
+      <td>221</td>
+      <td>614</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2393</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주고등학교</td>
+      <td>11</td>
+      <td>279</td>
+      <td>11</td>
+      <td>279</td>
+      <td>11</td>
+      <td>305</td>
+      <td>863</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>2394</th>
+      <td>제주특별자치도 서귀포시</td>
+      <td>서귀포산업과학고등학교</td>
+      <td>8</td>
+      <td>151</td>
+      <td>8</td>
+      <td>141</td>
+      <td>8</td>
+      <td>135</td>
+      <td>427</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>2395</th>
+      <td>제주특별자치도 서귀포시</td>
+      <td>성산고등학교</td>
+      <td>4</td>
+      <td>76</td>
+      <td>5</td>
+      <td>91</td>
+      <td>5</td>
+      <td>103</td>
+      <td>270</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>2396</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주외국어고등학교</td>
+      <td>4</td>
+      <td>99</td>
+      <td>4</td>
+      <td>95</td>
+      <td>4</td>
+      <td>92</td>
+      <td>286</td>
+      <td>463400</td>
+    </tr>
+    <tr>
+      <th>2397</th>
+      <td>제주특별자치도 제주시</td>
+      <td>제주제일고등학교부설방송통신고등학교</td>
+      <td>5</td>
+      <td>116</td>
+      <td>5</td>
+      <td>98</td>
+      <td>5</td>
+      <td>126</td>
+      <td>340</td>
+      <td>463400</td>
+    </tr>
+  </tbody>
+</table>
+<p>2398 rows × 10 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;1학년 총 학생수&#39;</span><span class="p">:[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39; 1학년 학생수&#39;</span><span class="p">]],</span>
+        <span class="s1">&#39;2학년 총 학생수&#39;</span><span class="p">:[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39; 2학년 학생수&#39;</span><span class="p">]],</span>
+        <span class="s1">&#39;3학년 총 학생수&#39;</span><span class="p">:[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39; 3학년 학생수&#39;</span><span class="p">]]}</span>
+<span class="n">total</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[75]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0.5729598 , 0.52233287, 0.22367876])</pre>
+<pre>{&#39;1학년 총 학생수&#39;: [463400], &#39;2학년 총 학생수&#39;: [444714], &#39;3학년 총 학생수&#39;: [500698]}</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">total</span><span class="p">,</span>
+                 <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1학년 총 학생수&#39;</span><span class="p">,</span> <span class="s1">&#39;2학년 총 학생수&#39;</span><span class="p">,</span> <span class="s1">&#39;3학년 총 학생수&#39;</span><span class="p">],</span>
+                 <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">])</span>
+<span class="n">df4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[78]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1학년 총 학생수</th>
+      <th>2학년 총 학생수</th>
+      <th>3학년 총 학생수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>total</th>
+      <td>463400</td>
+      <td>444714</td>
+      <td>500698</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Malgun Gothic&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;font.size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[132]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1학년 총 학생수</th>
+      <th>2학년 총 학생수</th>
+      <th>3학년 총 학생수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>total</th>
+      <td>463400</td>
+      <td>444714</td>
+      <td>500698</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;1학년 총 학생수&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[133]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>total    463400
+Name: 1학년 총 학생수, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;1학년 총 학생수&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;2학년 총 학생수&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;3학년 총 학생수&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>463400
+444714
+500698
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ts</span> <span class="o">=</span> <span class="p">[</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">]</span>
+<span class="n">ts</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[145]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[463400, 444714, 500698]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df4.values</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[140]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[463400, 444714, 500698]], dtype=int64)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x1 = df4.values</span>
+<span class="c1">#x = x1[0][:1]</span>
+<span class="c1">#print(x1[0][:1])</span>
+<span class="c1">#x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[463400]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[135]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([463400], dtype=int64)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">ts</span>
+<span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[147]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[463400, 444714, 500698]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1학년&#39;</span><span class="p">,</span> <span class="s1">&#39;2학년&#39;</span><span class="p">,</span> <span class="s1">&#39;3학년&#39;</span><span class="p">]</span>
+<span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[148]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;1학년&#39;, &#39;2학년&#39;, &#39;3학년&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#13.4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1학년 총 학생수 : </span><span class="si">%i</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">s1</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2학년 총 학생수 : </span><span class="si">%i</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">s2</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3학년 총 학생수 : </span><span class="si">%i</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">s3</span>)
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;전국 고등학교 학년별 총 학생수&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1학년 총 학생수 : 463400
+2학년 총 학생수 : 444714
+3학년 총 학생수 : 500698
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Chapter 14</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;population_age_2020.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[204]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>총인구수</th>
+      <th>0~9세</th>
+      <th>10~19세</th>
+      <th>20~29세</th>
+      <th>30~39세</th>
+      <th>40~49세</th>
+      <th>50~59세</th>
+      <th>60~69세</th>
+      <th>70~79세</th>
+      <th>80~89세</th>
+      <th>90~99세</th>
+      <th>100세 이상</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울</td>
+      <td>9736962</td>
+      <td>658355</td>
+      <td>813563</td>
+      <td>1455903</td>
+      <td>1505729</td>
+      <td>1563968</td>
+      <td>1539385</td>
+      <td>1200518</td>
+      <td>688818</td>
+      <td>263939</td>
+      <td>40404</td>
+      <td>6380</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산</td>
+      <td>3410925</td>
+      <td>241624</td>
+      <td>281120</td>
+      <td>434692</td>
+      <td>431911</td>
+      <td>518321</td>
+      <td>580966</td>
+      <td>511174</td>
+      <td>285602</td>
+      <td>109312</td>
+      <td>14396</td>
+      <td>1807</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구</td>
+      <td>2432883</td>
+      <td>186623</td>
+      <td>234528</td>
+      <td>321487</td>
+      <td>303397</td>
+      <td>391997</td>
+      <td>428622</td>
+      <td>311274</td>
+      <td>171217</td>
+      <td>74227</td>
+      <td>8817</td>
+      <td>694</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천</td>
+      <td>2954955</td>
+      <td>239941</td>
+      <td>281097</td>
+      <td>405835</td>
+      <td>417708</td>
+      <td>490716</td>
+      <td>515758</td>
+      <td>344843</td>
+      <td>172269</td>
+      <td>74306</td>
+      <td>11574</td>
+      <td>908</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주</td>
+      <td>1456121</td>
+      <td>125396</td>
+      <td>162728</td>
+      <td>207554</td>
+      <td>191432</td>
+      <td>244903</td>
+      <td>234048</td>
+      <td>155056</td>
+      <td>91020</td>
+      <td>38050</td>
+      <td>5529</td>
+      <td>405</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전</td>
+      <td>1473125</td>
+      <td>120476</td>
+      <td>151861</td>
+      <td>212143</td>
+      <td>199106</td>
+      <td>242381</td>
+      <td>243526</td>
+      <td>170291</td>
+      <td>88289</td>
+      <td>39190</td>
+      <td>5523</td>
+      <td>339</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산</td>
+      <td>1145710</td>
+      <td>103399</td>
+      <td>115623</td>
+      <td>147745</td>
+      <td>158271</td>
+      <td>190698</td>
+      <td>211255</td>
+      <td>136520</td>
+      <td>57438</td>
+      <td>21610</td>
+      <td>2991</td>
+      <td>160</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종</td>
+      <td>343788</td>
+      <td>47454</td>
+      <td>40574</td>
+      <td>36273</td>
+      <td>61442</td>
+      <td>65714</td>
+      <td>42907</td>
+      <td>27813</td>
+      <td>13609</td>
+      <td>6863</td>
+      <td>1084</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>13265377</td>
+      <td>1178548</td>
+      <td>1347854</td>
+      <td>1769080</td>
+      <td>1917785</td>
+      <td>2299179</td>
+      <td>2205106</td>
+      <td>1422638</td>
+      <td>742296</td>
+      <td>330231</td>
+      <td>48650</td>
+      <td>4010</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>1539521</td>
+      <td>108694</td>
+      <td>141975</td>
+      <td>179813</td>
+      <td>169694</td>
+      <td>227950</td>
+      <td>269666</td>
+      <td>226444</td>
+      <td>135668</td>
+      <td>68321</td>
+      <td>10493</td>
+      <td>803</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>1598599</td>
+      <td>128290</td>
+      <td>153119</td>
+      <td>198910</td>
+      <td>198768</td>
+      <td>243982</td>
+      <td>273857</td>
+      <td>209926</td>
+      <td>119037</td>
+      <td>63513</td>
+      <td>8656</td>
+      <td>541</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>2120995</td>
+      <td>179808</td>
+      <td>206578</td>
+      <td>243748</td>
+      <td>276553</td>
+      <td>329789</td>
+      <td>340568</td>
+      <td>264305</td>
+      <td>167339</td>
+      <td>97941</td>
+      <td>13481</td>
+      <td>885</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>1815112</td>
+      <td>135297</td>
+      <td>180675</td>
+      <td>212339</td>
+      <td>195971</td>
+      <td>274471</td>
+      <td>303074</td>
+      <td>244901</td>
+      <td>165445</td>
+      <td>89352</td>
+      <td>12770</td>
+      <td>817</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>1861894</td>
+      <td>137868</td>
+      <td>172888</td>
+      <td>202760</td>
+      <td>193083</td>
+      <td>265366</td>
+      <td>317226</td>
+      <td>259385</td>
+      <td>191719</td>
+      <td>105793</td>
+      <td>14984</td>
+      <td>822</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>2658956</td>
+      <td>198214</td>
+      <td>233506</td>
+      <td>291097</td>
+      <td>303472</td>
+      <td>390995</td>
+      <td>464427</td>
+      <td>389498</td>
+      <td>238482</td>
+      <td>130716</td>
+      <td>17589</td>
+      <td>960</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>3358828</td>
+      <td>282751</td>
+      <td>331566</td>
+      <td>384750</td>
+      <td>418383</td>
+      <td>543911</td>
+      <td>585186</td>
+      <td>435315</td>
+      <td>240111</td>
+      <td>119977</td>
+      <td>16139</td>
+      <td>739</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주도</td>
+      <td>670876</td>
+      <td>62086</td>
+      <td>71539</td>
+      <td>81968</td>
+      <td>84145</td>
+      <td>113076</td>
+      <td>111221</td>
+      <td>75172</td>
+      <td>44621</td>
+      <td>22963</td>
+      <td>3819</td>
+      <td>266</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[233]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;100세 이상&#39;</span><span class="p">]</span>
+<span class="n">df2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[233]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     6380
+1     1807
+2      694
+3      908
+4      405
+5      339
+6      160
+7       55
+8     4010
+9      803
+10     541
+11     885
+12     817
+13     822
+14     960
+15     739
+16     266
+Name: 100세 이상, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[231]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;지역&#39;</span><span class="p">][:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[231]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    서울
+Name: 지역, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[232]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;지역&#39;</span><span class="p">]</span>
+<span class="n">df3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[232]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0       서울
+1       부산
+2       대구
+3       인천
+4       광주
+5       대전
+6       울산
+7       세종
+8      경기도
+9      강원도
+10    충청북도
+11    충청남도
+12    전라북도
+13    전라남도
+14    경상북도
+15    경상남도
+16     제주도
+Name: 지역, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;총인구수&#39;</span><span class="p">]</span>
+<span class="n">df4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[245]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0      9736962
+1      3410925
+2      2432883
+3      2954955
+4      1456121
+5      1473125
+6      1145710
+7       343788
+8     13265377
+9      1539521
+10     1598599
+11     2120995
+12     1815112
+13     1861894
+14     2658956
+15     3358828
+16      670876
+Name: 총인구수, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[304]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df4 = []</span>
+<span class="n">df5</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df3</span><span class="p">)</span>
+<span class="c1">#df4[&#39;지역&#39;] = df3</span>
+<span class="n">df5</span><span class="p">[</span><span class="s1">&#39;100세 이상&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span>
+<span class="n">df5</span><span class="p">[</span><span class="s1">&#39;총 인구수&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df4</span>
+<span class="n">df5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[304]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>100세 이상</th>
+      <th>총 인구수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울</td>
+      <td>6380</td>
+      <td>9736962</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산</td>
+      <td>1807</td>
+      <td>3410925</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구</td>
+      <td>694</td>
+      <td>2432883</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천</td>
+      <td>908</td>
+      <td>2954955</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주</td>
+      <td>405</td>
+      <td>1456121</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전</td>
+      <td>339</td>
+      <td>1473125</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산</td>
+      <td>160</td>
+      <td>1145710</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종</td>
+      <td>55</td>
+      <td>343788</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>4010</td>
+      <td>13265377</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>803</td>
+      <td>1539521</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>541</td>
+      <td>1598599</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>885</td>
+      <td>2120995</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>817</td>
+      <td>1815112</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>822</td>
+      <td>1861894</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>960</td>
+      <td>2658956</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>739</td>
+      <td>3358828</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주도</td>
+      <td>266</td>
+      <td>670876</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[309]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df6</span> <span class="o">=</span> <span class="n">df5</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span> <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;100세 이상&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df7</span> <span class="o">=</span> <span class="n">df6</span>
+<span class="n">df7</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[309]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>100세 이상</th>
+      <th>총 인구수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울</td>
+      <td>6380</td>
+      <td>9736962</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>4010</td>
+      <td>13265377</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산</td>
+      <td>1807</td>
+      <td>3410925</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>960</td>
+      <td>2658956</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천</td>
+      <td>908</td>
+      <td>2954955</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>885</td>
+      <td>2120995</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>822</td>
+      <td>1861894</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>817</td>
+      <td>1815112</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>803</td>
+      <td>1539521</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>739</td>
+      <td>3358828</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구</td>
+      <td>694</td>
+      <td>2432883</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>541</td>
+      <td>1598599</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주</td>
+      <td>405</td>
+      <td>1456121</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전</td>
+      <td>339</td>
+      <td>1473125</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주도</td>
+      <td>266</td>
+      <td>670876</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산</td>
+      <td>160</td>
+      <td>1145710</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종</td>
+      <td>55</td>
+      <td>343788</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[312]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df6</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">17</span><span class="p">)</span>
+<span class="n">df6</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[312]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>100세 이상</th>
+      <th>총 인구수</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울</td>
+      <td>6380</td>
+      <td>9736962</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>4010</td>
+      <td>13265377</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산</td>
+      <td>1807</td>
+      <td>3410925</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>960</td>
+      <td>2658956</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천</td>
+      <td>908</td>
+      <td>2954955</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>885</td>
+      <td>2120995</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>822</td>
+      <td>1861894</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>817</td>
+      <td>1815112</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>803</td>
+      <td>1539521</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>739</td>
+      <td>3358828</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구</td>
+      <td>694</td>
+      <td>2432883</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>541</td>
+      <td>1598599</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주</td>
+      <td>405</td>
+      <td>1456121</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전</td>
+      <td>339</td>
+      <td>1473125</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주도</td>
+      <td>266</td>
+      <td>670876</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산</td>
+      <td>160</td>
+      <td>1145710</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종</td>
+      <td>55</td>
+      <td>343788</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[314]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df7</span> <span class="o">=</span> <span class="n">df6</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df7</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[314]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>지역</th>
+      <th>100세 이상</th>
+      <th>총 인구수</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울</td>
+      <td>6380</td>
+      <td>9736962</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>경기도</td>
+      <td>4010</td>
+      <td>13265377</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>부산</td>
+      <td>1807</td>
+      <td>3410925</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>경상북도</td>
+      <td>960</td>
+      <td>2658956</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>인천</td>
+      <td>908</td>
+      <td>2954955</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>충청남도</td>
+      <td>885</td>
+      <td>2120995</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>전라남도</td>
+      <td>822</td>
+      <td>1861894</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>전라북도</td>
+      <td>817</td>
+      <td>1815112</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>강원도</td>
+      <td>803</td>
+      <td>1539521</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>경상남도</td>
+      <td>739</td>
+      <td>3358828</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>대구</td>
+      <td>694</td>
+      <td>2432883</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청북도</td>
+      <td>541</td>
+      <td>1598599</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>광주</td>
+      <td>405</td>
+      <td>1456121</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>대전</td>
+      <td>339</td>
+      <td>1473125</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>제주도</td>
+      <td>266</td>
+      <td>670876</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>울산</td>
+      <td>160</td>
+      <td>1145710</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>세종</td>
+      <td>55</td>
+      <td>343788</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
